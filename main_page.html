@@ -1,0 +1,164 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8" />
+    <script type="text/javascript" src="main_js.js"></script>
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/tone/14.8.9/Tone.js" integrity="sha512-nUjml8mN4CNYqBAy0ndDrd8pJV/eTtBNDsnvNtPqozx9/BccUeWSoKW14qWkQUnhuh8E3m+yra3qdzM68lqPEQ==" crossorigin=“anonymous"></script>
+
+    <link rel="stylesheet" type="text/css" href="main.css">
+    <script src="midi-to-sheet-music.js"></script>
+    <script src="sound_manage01.js"></script>
+    <meta charset="utf-8" />
+
+    <title> WEB PIANO</title>
+
+
+</head>
+<body>
+    <h1>WEB PIANO 01</h1>
+    <div class="sheet"></div>
+
+
+
+
+    <div class="container">
+
+        <!--<div id="key1" class="key white">C</div>
+        <div id="key2" class="key black">C#</div>
+        <div id="key3" class="key white">D</div>
+        <div id="key4" class="key black">E♭</div>
+        <div id="key5" class="key white">E</div>
+        <div id="key6" class="key white">F</div>
+        <div id="key7" class="key black">F#</div>
+        <div id="key8" class="key white">G</div>
+        <div id="key9" class="key black">G#</div>
+        <div id="key10" class="key white">A</div>
+        <div id="key11" class="key black">B♭</div>
+        <div id="key12" class="key white">B</div>-->
+        <div id="key13" class="key white">
+
+            <span id="word1">C</span>
+            <span id="word2">Q</span>
+
+        </div>
+        <div id="key14" class="key black">
+            <span id="word1">C#</span>
+            <span id="word2">W</span>
+        </div>
+        <div id="key15" class="key white">
+            <span id="word1">D</span>
+            <span id="word2">E</span>
+        </div>
+        <div id="key16" class="key black">
+            <span id="word1">D#</span>
+            <span id="word2">R</span>
+        </div>
+        <div id="key17" class="key white">
+            <span id="word1">E</span>
+            <span id="word2">T</span>
+        </div>
+        <div id="key18" class="key white">
+            <span id="word1">F</span>
+            <span id="word2">Y</span>
+        </div>
+        <div id="key19" class="key black">
+            <span id="word1">F#</span>
+            <span id="word2">U</span>
+        </div>
+        <div id="key20" class="key white">
+            <span id="word1">G</span>
+            <span id="word2">I</span>
+        </div>
+        <div id="key21" class="key black">
+            <span id="word1">G#</span>
+            <span id="word2">O</span>
+        </div>
+        <div id="key22" class="key white">
+            <span id="word1">A</span>
+            <span id="word2">P</span>
+        </div>
+        <div id="key23" class="key black">
+            <span id="word1">A#</span>
+            <span id="word2">{</span>
+        </div>
+        <div id="key24" class="key white">
+            <span id="word1">B</span>
+            <span id="word2">}</span>
+        </div>
+        <div id="key25" class="key white">
+            <span id="word1" style="color: blue; font-weight: bold;">C3</span>
+            <span id="word2">`</span>
+        </div>
+        <div id="key26" class="key black">
+            <span id="word1">C#</span>
+            <span id="word2">1</span>
+        </div>
+        <div id="key27" class="key white">
+            <span id="word1">D</span>
+            <span id="word2">2</span>
+        </div>
+        <div id="key28" class="key black">
+            <span id="word1">D#</span>
+            <span id="word2">3</span>
+        </div>
+        <div id="key29" class="key white">
+            <span id="word1">E</span>
+            <span id="word2">4</span>
+        </div>
+        <div id="key30" class="key white">
+            <span id="word1">F</span>
+            <span id="word2">5</span>
+        </div>
+        <div id="key31" class="key black">
+            <span id="word1">F#</span>
+            <span id="word2">6</span>
+        </div>
+        <div id="key32" class="key white">
+            <span id="word1">G</span>
+            <span id="word2">7</span>
+        </div>
+        <div id="key33" class="key black">
+            <span id="word1">G#</span>
+            <span id="word2">8</span>
+        </div>
+        <div id="key34" class="key white">
+            <span id="word1">A</span>
+            <span id="word2">9</span>
+        </div>
+        <div id="key35" class="key black">
+            <span id="word1">A#</span>
+            <span id="word2">0</span>
+        </div>
+        <div id="key36" class="key white">
+            <span id="word1">B2</span>
+            <span id="word2">-</span>
+        </div>
+            <div id="key37" class="key white">
+                <span id="word1">C</span>
+                <span id="word2">=</span>
+            </div>
+
+            <!--<div id="key38" class="key black">C#</div>
+            <div id="key39" class="key white">D</div>
+
+            <div id="key40" class="key black">E♭</div>
+            <div id="key41" class="key white">E</div>
+            <div id="key42" class="key white">F</div>
+            <div id="key43" class="key black">F#</div>
+            <div id="key44" class="key white">G</div>
+            <div id="key45" class="key black">G#</div>
+            <div id="key46" class="key white">A</div>
+            <div id="key47" class="key black">B♭</div>
+            <div id="key48" class="key white">B</div>
+            <div id="key49"
+                 onmousedown="this.style.background = 'linear-gradient(#E74949 96%, #CA1717 4%)'; this.style.color = 'white';"
+                 onmouseup="this.style.background = 'linear-gradient(#fff 96%, #eee 4%)';this.style.color = 'black';" class="key white">C</div>-->
+        </div>
+
+
+
+
+
+</body>
+</html>
